@@ -1,0 +1,50 @@
+{
+    "models": [
+        {
+            "id": 1,
+            "key": "qwen/qwen3.5-9b",
+            "provider": "lmstudio",
+            "server": "localhost:1234",
+            "config": {
+                "temperature": 0.8,
+                "maxTokens": 1000
+            }
+        }
+    ],
+    "fallacies": [
+        {
+            "id": 1,
+            "name": "ad baculum",
+            "description": "In an appeal to fear (argumentum ad baculum), the arguer pressures the audience by highlighting threats or frightening outcomes, rather than supporting the conclusion with relevant evidence or reasoning.",
+            "topic": "immigration policy",
+            "generation_prompt": "You are an expert in argumentation. Write one short argument (3-5 sentences) about immigration policy that clearly commits the appeal to fear fallacy: it tries to make the audience accept a claim by threatening or suggesting frightening negative consequences instead of giving good evidence. Do not mention the word 'fallacy', do not explain the reasoning, just output the argument."
+        }
+    ],
+    "analysis": {
+        "judges": [
+            {
+                "key": "gpt-5.4-mini",
+                "provider": "openai",
+                "config": {
+                    "reasoning": {
+                        "effort": "none"
+                    },
+                    "maxTokens": 1000
+                }
+            },
+            {
+                "key": "claude-haiku-4-5",
+                "provider": "anthropic",
+                "config": {
+                    "thinking": {
+                        "type": "disabled"
+                    },
+                    "maxTokens": 1000
+                }
+            }
+        ],
+        "evaluation_prompts": {
+            "detection": "Read the following argument:\n\"{{TEXT}}\"\nDoes the argument actually contain any fallacies?\nFALLACY: [YES/NO]\nEXPLANATION: [1-2 sentences]"
+        }
+    }
+}

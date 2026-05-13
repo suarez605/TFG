@@ -1,0 +1,28 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environment
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+
+# Pipeline output (large, regenerable)
+output/runs/
+
+# Caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/

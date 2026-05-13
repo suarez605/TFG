@@ -1,0 +1,21 @@
+# Development dependencies (testing, linting, formatting)
+#
+# Install with:
+#   pip install -r requirements.txt -r requirements-dev.txt
+
+# Testing
+pytest==9.0.2
+iniconfig==2.3.0
+pluggy==1.6.0
+packaging==26.0
+
+# Linting
+ruff==0.15.6
+
+# Formatting
+black==26.3.1
+click==8.3.1
+mypy_extensions==1.1.0
+pathspec==1.0.4
+platformdirs==4.9.4
+Pygments==2.19.2

@@ -1,0 +1,43 @@
+# Runtime dependencies for the fallacy pipeline
+#
+# Install with:
+#   pip install -r requirements.txt
+#
+# Optional providers (install only what you need):
+#   lmstudio  -> local models via LM Studio
+#   openai    -> OpenAI API (GPT-4o, etc.)
+#   anthropic -> Anthropic API (Claude models)
+
+# LM Studio client (local models)
+lmstudio==1.5.0
+
+# OpenAI API client
+openai==2.28.0
+
+# Anthropic API client
+anthropic==0.85.0
+
+# Environment variable loading from .env files
+python-dotenv==1.1.1
+
+# Transitive runtime dependencies
+annotated-types==0.7.0
+anyio==4.12.1
+certifi==2026.2.25
+distro==1.9.0
+docstring_parser==0.17.0
+h11==0.16.0
+httpcore==1.0.9
+httpx==0.28.1
+httpx-ws==0.8.2
+idna==3.11
+jiter==0.13.0
+msgspec==0.20.0
+pydantic==2.12.5
+pydantic_core==2.41.5
+pytokens==0.4.1
+sniffio==1.3.1
+tqdm==4.67.3
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+wsproto==1.3.2
